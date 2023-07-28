@@ -1,0 +1,35 @@
+.form-title{
+    text-align: center;
+}
+
+.form-label{
+    text-align: center;
+    display: block;
+}
+
+.form-input-field{
+    display: flex;
+    width: auto;
+    background-color: beige;
+    border:none;
+    border-radius: 5px;
+    margin: auto;
+    padding:20px;
+}
+
+.form-section{
+    justify-content: center;
+}
+
+.center-button{
+    text-align: center;
+}
+
+.add-product-button{
+background-color:aqua;
+color:white;
+padding:10px;
+border:none;
+border-radius: 5px;
+cursor:pointer;
+}

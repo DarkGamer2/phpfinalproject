@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/createAccount.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Shop Express - Create Account</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-style">
+          <ul class="nav-layout">
+            <li class="nav-item">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="nav-item"><a href="./Products.html">Products</a></li>
+            <li class="nav-item"><a href="./About.html">About</a></li>
+            <li class="nav-item"><a href="./Blog.html">Blog</a></li>
+            <li class="nav-item">
+              <a href="./LoginForm.html">
+                <button class="login-button">
+                  <i class="fa-solid fa-right-to-bracket margin-icon"></i>Login
+                </button></a
+              >
+            </li>
+            <li class="nav-item">
+              <button class="dark-button">
+                <i class="fa-solid fa-moon margin-icon"></i>Dark Mode
+              </button>
+            </li>
+            <li class="nav-item">
+              <a href="./createAccountForm.html">
+                <button class="create-button">
+                  <i class="fa-solid fa-user-plus margin-icon"></i>Sign Up
+                </button>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    <section>
+        <h1 class="form-title">Create An Account</h1>
+    </section>
+    <section>
+        <form method="POST" action="../../server/registerUser.php">
+           <div class="form-section">
+            <label class="form-label">Email: </label>
+            <input class="form-input-field" type="email" name="email"/>
+           </div>
+           <div class="form-section">
+            <label class="form-label">First Name: </label>
+            <input class="form-input-field" type="text" name="first_name"/>
+           </div>
+           <div class="form-section">
+            <label class="form-label">Last Name: </label>
+            <input class="form-input-field" type="text" name="last_name"/>
+           </div>
+            <div class="form-section">
+                <label class="form-label">Password: </label>
+                <input class="form-input-field" type="password" name="account_password"/>
+            </div>
+            <div class="center-button">
+                <button type="submit" class="create-account-button">Create Account</button>
+            </div>
+        </form>
+        <a href="./LoginForm.html" class="login-link">Already Have an account? Login</a>
+    </section>
+</body>
+</html>
