@@ -14,7 +14,7 @@ $conn=new mysqli($host,$username,$password,$database);
 $sql="INSERT INTO tblusers (email,first_name,last_name,account_password) VALUES ('$email','$first_name','$last_name','$hashedPassword')";
 
 if($conn->query($sql)===TRUE){
-    header("Location: ../../../frontend/pages/LoginForm.html");
+    header("Location:./pages/LoginForm.html");
     exit;
 }
 else{

@@ -1,7 +1,7 @@
 const productContainer=document.getElementsByClassName('product-container');
 
 // Fetch data using JavaScript
-fetch('../../server/getProducts.php')
+fetch('../getProducts.php')
   .then(response => response.json())
   .then(data => {
     // Parse and display data

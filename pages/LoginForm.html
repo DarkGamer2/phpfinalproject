@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/loginForm.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-style">
+          <ul class="nav-layout">
+            <li class="nav-item">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="nav-item"><a href="./Products.html">Products</a></li>
+            <li class="nav-item"><a href="./About.html">About</a></li>
+            <li class="nav-item"><a href="./Blog.html">Blog</a></li>
+            <li class="nav-item">
+              <a href="./LoginForm.html">
+                <button class="login-button">
+                  <i class="fa-solid fa-right-to-bracket margin-icon"></i>Login
+                </button></a
+              >
+            </li>
+            <li class="nav-item">
+              <button class="dark-button">
+                <i class="fa-solid fa-moon margin-icon"></i>Dark Mode
+              </button>
+            </li>
+            <li class="nav-item">
+              <a href="./createAccountForm.html">
+                <button class="create-button">
+                  <i class="fa-solid fa-user-plus margin-icon"></i>Sign Up
+                </button>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    <section>
+        <h1 class="form-title">Login</h1>
+    </section>
+   <section>
+    <form method="POST" action="../authenticateUserLogin.php">
+        <div class="form-section">
+            <label class="form-label">Email: </label>
+        <input class="form-input-field"type="email" name="email"/>
+        </div>
+      <div class="form-section">
+        <label class="form-label">Password: </label>
+        <input class="form-input-field"type="password" name="account_password"/>
+      </div>
+        <div class="center-button">
+            <button class="login-button" type="submit">Login</button>
+        </div>
+    </form>
+    <p>Don't have an account? <a href="./createAccountForm.html" class="create-account-link">Create one</a></p>
+    <p>Don't have an account? <a href="./AdminLogin.html" class="create-account-link">Admin Login</a></p>
+   </section>
+   <script src="../js/index.js"></script>
+</body>
+</html>
