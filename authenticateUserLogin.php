@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if(password_verify($account_password,$hashedPassword)){
         $_SESSION['email'] = $email;
-        header('Location: ./pages/index.html');
+        header('Location: ./dashboard.php');
         exit;
     }
     else{
