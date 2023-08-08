@@ -57,9 +57,11 @@ mysqli_stmt_close($stmt);
           </button>
         </li>
         <li class="nav-item">
-          <button class="dark-button">
+         <a href="./cartpage.php">
+         <button class="dark-button">
             <i class="fa-solid fa-cart-shopping margin-icon"></i> Cart
           </button>
+         </a>
         </li>
         <li class="nav-item">
           <form action="logout.php" method="POST">

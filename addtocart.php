@@ -13,18 +13,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add_to_cart'])) {
-    $product_id = $_POST["product_id"]; // Use 'product_id' from the form
-
-    // Check if the product is already in the cart
-    if (!isset($_SESSION['cart'][$product_id])) {
-        // Product is not in cart, add with quantity 1
-        $_SESSION['cart'][$product_id] = 1;
-    } else {
-        // Product is already in cart, increment quantity
-        $_SESSION['cart'][$product_id]++;
-    }
+// Add the product to the cart
+if (!isset($_SESSION['cart'][$product_id])) {
+    // Product is not in cart, add with quantity 1
+    $_SESSION['cart'][$product_id] = 1;
+} else {
+    // Product is already in cart, increment quantity
+    $_SESSION['cart'][$product_id]++;
 }
+
 
 $conn->close();
 
