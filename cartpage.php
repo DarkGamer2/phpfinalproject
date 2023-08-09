@@ -20,19 +20,21 @@
             <th class="actions">Actions</th>
         </tr>
         <?php
-        session_start();
         $host="localhost";
         $username="root";
         $password="";
         $database="shop_express";
-    
+        
         $conn = new mysqli($host,$username,$password,$database);
+        
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        
+        session_start();
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+       
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     // User is not authenticated, redirect to the login page
     header("Location: ./pages/LoginForm.html"); // Replace 'login.php' with your actual login page
@@ -97,7 +99,9 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                 <button class="clear-all-button" type="submit">Clear All</button>
             </form>
         </div>
-        <a href="checkout.php" class="checkout-button">Proceed to Checkout</a>
+        <form method="POST" action="./checkout.php">
+        <button class="checkout-button">Proceed to Checkout</button>
+        </form>
     </div>
     </div>
 </body>

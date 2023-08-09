@@ -4,18 +4,18 @@ $username = "root";
 $password = "";
 $database = "shop_express";
 
+$conn = new mysqli($host, $username, $password, $database);
 session_start();
 
 if (!isset($_SESSION['email'])) {
-  header("Location: ./pages/LoginForm.html");
-  exit;
+    header("Location: ./pages/LoginForm.html");
+    exit;
 }
 
-$conn = new mysqli($host, $username, $password, $database);
 $email = $_SESSION['email'];
-$query = 'SELECT first_name FROM tblusers WHERE email =?';
+$query = 'SELECT first_name FROM tblusers WHERE email = ?';
 $stmt = mysqli_prepare($conn, $query);
-mysqli_stmt_bind_param($stmt, 'i', $email);
+mysqli_stmt_bind_param($stmt, 's', $email);
 mysqli_stmt_execute($stmt);
 
 $result = mysqli_stmt_get_result($stmt);
